@@ -14,6 +14,13 @@ public class TestQueue
         Q.enqueue(12);
         Q.enqueue(29);
 
+        System.out.println("Peek : " + Q.peek());
+        System.out.println("Pop : " + Q.dequeue());
+        System.out.println("Pop : " + Q.dequeue());
+        System.out.println("Pop : " + Q.dequeue());
+        Q.enqueue(45);
 
+        System.out.println("Pop : " + Q.dequeue());
+        System.out.println("Pop : " + Q.dequeue());
     }
 }
