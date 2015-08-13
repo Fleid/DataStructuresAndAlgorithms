@@ -13,15 +13,18 @@ public class LinkedList
 
 	public void insertAtTail( int data )
 	{
-		DNode newValue = new DNode( data );
 		DNode current = this.headNode;
-
-		while (current != null)
+		if (current == null)
 		{
-			current = current.getNextNode();
+			insertAtHead( data );
 		}
-
-		current.setNextNode(newValue);
+		else {
+			DNode newValue = new DNode(data);
+			while (current != null) {
+				current = current.getNextNode();
+			}
+			current.setNextNode(newValue);
+		}
 	}
 
 	public int readFromHead()
