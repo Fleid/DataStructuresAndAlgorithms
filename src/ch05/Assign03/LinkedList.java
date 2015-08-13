@@ -10,7 +10,20 @@ public class LinkedList
 		newHead.setNextNode(this.headNode);
 		this.headNode = newHead;
 	}
-	
+
+	public void insertAtTail( int data )
+	{
+		DNode newValue = new DNode( data );
+		DNode current = this.headNode;
+
+		while (current != null)
+		{
+			current = current.getNextNode();
+		}
+
+		current.setNextNode(newValue);
+	}
+
 	public int readFromHead()
 	{
 		return this.headNode.getData();
